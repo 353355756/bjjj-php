@@ -39,7 +39,7 @@
         function getServerStatus() {
             $.ajax({
                 type:"get",
-                url:"checkService.php",
+                url:"checkCurTime.php",
                 dataType:"json",
                 success:function(msg){
                     $("#lasttime").text(msg.timestamp);

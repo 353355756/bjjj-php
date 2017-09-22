@@ -29,8 +29,7 @@ function makeOutLog($info) {
     $now = date("Y-m-d H:i:s");
     $now.= ' ';
     $now.= sprintf('%03d', get_millisecond());
-    $pid = getmypid();
-    $content = "$now($pid): $info\n";
+    $content = "$now: $info\n";
     file_put_contents($file, $content, FILE_APPEND);
 }
 function makeTimestampPoint() {
@@ -55,6 +54,8 @@ global $page_index;
 global $page_entercarlist;
 global $page_loadotherdrivers;
 global $page_submitpaper;
+global $page_curtime;
+global $page_toVehicleType;
 global $appsource;
 global $appkey;
 global $deviceid;
@@ -87,5 +88,6 @@ $page_addcartype = '/enterbj/platform/enterbj/addcartype';
 $page_applyBjMessage = '/enterbj/platform/enterbj/applyBjMessage';
 $page_loadotherdrivers = '/enterbj-img/platform/enterbj/loadotherdrivers';
 $page_submitpaper = '/enterbj/platform/enterbj/submitpaper';
-
+$page_curtime = '/enterbj/platform/enterbj/curtime_03';
+$page_toVehicleType = '/enterbj/platform/enterbj/toVehicleType';
 ?>

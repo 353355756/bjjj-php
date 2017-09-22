@@ -4,6 +4,7 @@ header('Content-Type:text/html;charset=utf-8');
 require_once 'config.php';
 require_once 'entercarlist.php';
 require_once 'addcartype.php';
+require_once 'applyBjMessage.php';
 require_once 'submitpaper.php';
 
 // 超过9点就不要自动提交了
