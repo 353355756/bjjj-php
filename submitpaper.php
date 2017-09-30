@@ -33,7 +33,7 @@ function submitPaper($userid,$licenseno,$needPhoto) {
     $code = '';
 
     // 从person.json中读取个人信息
-    $person_info = loadConfig($userid.'/'.'person.json');
+    $person_info = loadConfig($userid.'/'.$licenseno.'/'.'person.json');
     $drivingphoto = $person_info['drivingphoto'];
     $carphoto = $person_info['carphoto'];
     $drivername = $person_info['drivername'];
