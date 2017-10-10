@@ -78,8 +78,8 @@ $headers = array(
 $appsource = 'bjjj';
 $appkey = 'kkk';
 $deviceid = 'ddd';
-// platform统一用Android类型
-$platform = '02';
+// platform: 01 - iOS; 02 - Android
+$platform = '01';
 // 主页
 $page_index = '/enterbj/jsp/enterbj/index.html';
 // 获取车辆进京证状态

@@ -83,7 +83,7 @@ function submitPaper($userid,$licenseno,$needPhoto) {
         'appkey'=>'',
         'deviceid'=>'',
         'token'=>'',
-        'timestamp'=>'',
+        'timestamp'=>$hiddentime,
         'userid'=>$userid,
         'licenseno'=>$licenseno,
         'engineno'=>$engineno,
