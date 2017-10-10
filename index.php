@@ -9,9 +9,7 @@ require_once 'submitpaper.php';
 
 // 超过9点就不要自动提交了
 if (isHourOver9()) {
-    https(404);
-    makeOutHtml("超过9点不自动提交");
-    makeOutLog("超过9点不自动提交");
+    https(403);
     return;
 }
 
@@ -97,6 +95,9 @@ for ($i = 0; $i < count($info_users); $i++) {
     }
     // 优化：保存entercarlist结果，用来判定是否需要查询
     saveConfig($userid.'/'.'entercarlist.json', $data_json);
+    // 输出json
+    makeOutHtml("Enter car list $i result = ".$result_array[1]);
+    makeOutLog("Enter car list $i result = ".$result_array[1]);
     // 是否可以申请，carinfo下边用applyflag来判断
     $applyflag = $carobj->{'applyflag'};
     if ($applyflag != '1') {
