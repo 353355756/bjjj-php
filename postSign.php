@@ -1,6 +1,7 @@
 <?php
 // 设置输出编码
 header('Content-Type:text/html;charset=utf-8');
+require_once 'http.php';
 /**
  * Created by PhpStorm.
  * User: zeonadmin
@@ -21,6 +22,14 @@ $platform = $_GET['platform'];
 $input = file_get_contents("php://input");
 
 if (strlen($userid) == 0 || strlen($type) == 0 || strlen($date) == 0 || strlen($platform) == 0 || strlen($input) == 0) {
+    https(400);
+    echo $input;
+    exit(-1);
+}
+// 校验内容
+$json_content = json_decode($input, true);
+if (count($json_content) <= 1) {
+    https(400);
     echo $input;
     exit(-1);
 }

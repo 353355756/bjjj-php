@@ -1,6 +1,7 @@
 <?php
 // 设置输出编码
 header('Content-Type:text/html;charset=utf-8');
+require_once 'http.php';
 require_once 'config.php';
 require_once 'entercarlist.php';
 require_once 'addcartype.php';
@@ -45,6 +46,16 @@ for ($i = 0; $i < count($info_users); $i++) {
         makeOutHtml("User $i path not exists");
         makeOutLog("User $i path not exists");
         continue;
+    }
+    // 修复token、sign文件有问题的bug
+    if (is_file($path.'/'.'sign.json')) {
+        $json_sign = loadConfig($path.'/'.'sign.json');
+        $json_timestamp = loadConfig($path.'/'.'timestamp.json');
+        if (count($json_sign) <= 1 or count($json_timestamp) <=1 ) {
+            makeOutHtml("User $i sign or timestamp json file with error!!!");
+            makeOutLog("User $i sign or timestamp json file with error!!!");
+            continue;
+        }
     }
     // 优化：读取entercarlist结果，判定是否需要申请
     if (is_file($userid.'/'.'entercarlist.json')) {
