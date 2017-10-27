@@ -87,7 +87,7 @@ $page_entercarlist = '/enterbj/platform/enterbj/entercarlist';
 $page_addcartype = '/enterbj/platform/enterbj/addcartype';
 $page_applyBjMessage = '/enterbj/platform/enterbj/applyBjMessage';
 $page_loadotherdrivers = '/enterbj-img/platform/enterbj/loadotherdrivers';
-$page_submitpaper = '/enterbj-img/platform/enterbj/submitpaper_03'; //'/enterbj/platform/enterbj/submitpaper';
+$page_submitpaper = '/enterbj-img/platform/enterbj/submitpaper_03';
 $page_curtime = '/enterbj/platform/enterbj/curtime_03';
 $page_toVehicleType = '/enterbj/platform/enterbj/toVehicleType';
 ?>

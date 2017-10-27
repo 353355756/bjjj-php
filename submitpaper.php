@@ -74,7 +74,7 @@ function submitPaper($userid,$licenseno,$needPhoto) {
 
     $form = array(
         'appsource'=>$appsource,
-        'hiddentime'=>$hiddentime,
+        'hiddentime'=>'',
         'inbjentrancecode1'=>$inbjentrancecode1,
         'inbjentrancecode'=>$inbjentrancecode,
         'inbjduration'=>$inbjduration,
