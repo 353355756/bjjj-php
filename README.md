@@ -10,15 +10,15 @@
 ### 目录结构
 * /
     * 根目录
-* /userid
+* /[userid](/userid)
     * 各种json文件的模板文件存放目录
-    * /car.json
+    * /[car.json](/userid/car.json)
         * 车辆信息
         * "licenseno" 车牌号
         * "engineno" 发动机型号
         * "cartypecode" 车类型
         * "vehicletype" 车辆类型
-    * /person.json
+    * /[person.json](/userid/person.json)
         * 个人信息
         * "drivingphoto" 行驶证
         * "carphoto" 车辆正面照
@@ -26,13 +26,13 @@
         * "driverlicenseno" 身份证号
         * "driverphoto" 驾驶证
         * "personphoto" 本人持身份证照
-    * /date
+    * /[date](/userid/date)
         * 日期目录
         * /token.json 用于获取车辆信息列表时使用
         * /sign.json  用于获取车辆信息列表时使用
         * /timestamp.json 用于最后提交申请时使用
             * 这些json文件都是由时间戳作为key取值的，取的是该日期当天的0点至9点每6分钟取一个点
-* /users.json
+* /[users.json](/users.json)
     * 多用户模式，userid的json array
 * /{userid}
     * 某个userid命名的目录，存放该用户所有的个人数据
@@ -47,8 +47,8 @@
     * /{licenseno}
         * 车牌目录
         * /car.json
-            * 用car.json模板创建的用例
+            * 用[car.json](/userid/car.json)模板创建的用例
         * /person.json
-            * 用person.json模板创建的用例
+            * 用[person.json](/userid/person.json)模板创建的用例
     * /cars.json
         * 多车辆模式，默认目前一个账号只能申请一个，只取第一个
